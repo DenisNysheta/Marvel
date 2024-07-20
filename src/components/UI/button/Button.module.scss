@@ -1,0 +1,94 @@
+@import "../../../assets/styles/mixins.scss";
+@import "../../../assets/styles/_App.scss";
+
+.btn {
+    outline: none;
+    border: none;
+    font-size: 10px;
+    transition: .5s ease;
+    cursor: pointer;
+
+    @include font(20px,900);
+    @include colors(white,none);
+    @include indentation(none, 20px 40px)
+}
+
+.btnlogIn {
+    background-color: var(--back-color-btn-login);
+    border-radius: 20px;
+
+    &:hover {
+        border-radius: 20px 0 20px 0;
+    }
+
+    &:active {
+        transition: .1s linear;
+        box-shadow: 0 0 20px 7px inset black;
+    }
+
+}
+
+.btnlogOut {
+    background-color: var(--back-color-btn-logout);
+    border-radius: 20px;
+
+    &:hover {
+        border-radius: 0 20px 0 20px;
+    }
+
+    &:active {
+        transition: .1s linear;
+        box-shadow: 0 0 20px 7px inset var(--backcolor-btn-logout);
+    }
+
+}
+
+.btnSwitch {
+    cursor: pointer;
+    transition: .5s ease;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    right: var(--position-btnSwitch);
+    
+
+    @include colors(none,var(--backcolor-btn-logout));
+    @include sizes(50px,50px)
+}
+
+.subscribe {
+    transition: .1s linear;
+    user-select: none;
+
+    &:hover {
+        border-radius: 10px
+    }
+
+    &:active {
+        box-shadow: 0 0 20px 7px inset black;
+    }
+
+    @include indentation(0 !important, 0 !important);
+    @include flexy(center,center,row,no-wrap);
+    @include colors(var(--main-color-text),var(--back-color-btn-login));
+    @include sizes(200px,50px)
+}
+
+.more {
+    border: none;
+    outline: none;
+    transition: .1s linear;
+
+    &:hover {
+        border-radius: 20px;
+        background-color: darkorange
+    }
+
+    &:active {
+        box-shadow: 0 0 20px 0 inset black;
+    }
+
+    @include colors(var(--main-color-text),var(--back-color-btn-login));
+    @include indentation(0 0 0 0, 10px 25px)
+}

@@ -1,0 +1,63 @@
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/_App.scss";
+
+@for $i from 1 through 50 {
+    .list__hero:nth-child(#{$i}){
+      animation-delay: random() + s;
+    }
+}
+
+.list {
+    gap: 100px;
+    position: fixed;
+    top: 130px;
+    z-index: -1;
+    transition: .5s ease;
+
+    &__hero {
+        opacity: 0;
+        transition: .5s linear;
+        border: 5px solid black;
+        width: 100px;
+        outline: 5px solid var(--border-for-herous);
+        height: 100px;
+        border-radius: 100%;
+
+        animation: back 10s linear infinite alternate;
+
+        @keyframes back {
+        0%{
+            transform: scale(1);
+        } 25% {
+            transform: scale(1.2);
+        } 50%  {
+            transform: scale(1);
+        } 75% {
+            transform: scale(.8);
+        } 100% {
+            transform: scale(1.1);
+        }
+
+        }
+
+        & img { 
+            border-radius: inherit;
+            @include sizes(inherit,inherit)
+        }
+
+        @include sizes(100px, 100px)
+    }
+
+    @include colors(none, var(--back-for-list-hero));
+    @include flexy(center,center,row,wrap);
+    @include sizes(100%,100vh);
+
+    @include mobile-portrait {
+        height: 2500px;
+    }
+
+    @include fullHd {
+        width: 1920px;
+        height: 3055px;
+    }
+}

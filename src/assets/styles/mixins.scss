@@ -1,0 +1,80 @@
+
+// Flex
+@mixin flexy($justify, $align, $direction, $wrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+};
+
+// Width/Heigth
+@mixin sizes($width, $height) {
+    width: $width;
+    height: $height;
+};
+// Colort-text/Background-color
+@mixin colors($color, $background) {
+    color: $color;
+    background: $background;
+};
+// Margin.Padding
+@mixin indentation($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+};
+// Font-size/font-weight
+@mixin font($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+};
+
+
+// Media query
+@mixin desktop-s-portrait {
+    @media (max-width: 1100px) {    
+        @content
+    }
+};
+
+@mixin desktop-l-portrait {
+    @media (max-width: 1615px) {    
+        @content
+    }
+};
+
+@mixin tablet-l-portrait {
+    @media (max-width: 850px) {
+        @content
+    }
+};
+
+@mixin tablet-s-portrait {
+    @media (max-width: 600px) {
+        @content
+    }
+};
+
+@mixin mobile-portrait {
+    @media (max-width: 505px) {
+        @content
+    }
+};
+
+@mixin mobile-l-portrait {
+    @media (max-width: 450px) {
+        @content
+    }
+}
+
+@mixin mobile-s-protrait {
+    @media (max-width: 350px) {
+        @content
+    }
+}
+
+@mixin fullHd {
+    @media (min-width: 1921px) {
+        @content
+    }
+} 

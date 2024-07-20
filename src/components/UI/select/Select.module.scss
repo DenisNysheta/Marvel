@@ -1,0 +1,16 @@
+@import "../../../assets/styles/App";
+@import "../../../assets/styles/mixins.scss";
+
+.select {
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition: .5s ease;
+
+    &:focus {
+        background-color: bisque;
+    }
+
+    padding: 10px;
+    @include colors(var(--backcolor-btn-logout), var( --line-color-hover-menu));
+}

@@ -1,0 +1,159 @@
+@import "../../../assets/styles/App";
+@import "../../../assets/styles/mixins.scss";
+
+.myLoader {
+    width: 200px;
+    height: 200px;
+    @include flexy(space-evenly,center,row, no-wrap)
+}
+
+.first {
+    width: 10px;
+    border-radius: 20px;
+    height: 20%;
+    background-color: black;
+    animation: first .5s ease 0s infinite;
+    animation-delay: .2s;
+}
+
+.second {
+    width: 10px;
+    border-radius: 20px;
+    height: 20%;
+    background-color: black;
+    animation: second .5s ease 0s infinite  ;
+    animation-delay: .4s;
+}
+
+.third {
+    width: 10px;
+    border-radius: 20px;
+    height: 20%;
+    background-color: black;
+    animation: third .5s ease 0s infinite  ;
+    animation-delay: .6s;
+}
+
+.four {
+    width: 10px;
+    border-radius: 20px;
+    height: 20%;
+    background-color: black;
+    animation: four .5s ease 0s infinite ;
+    animation-delay: .8s;
+}
+
+.five {
+    width: 10px;
+    border-radius: 20px;
+    height: 20%;
+    background-color: black;
+    animation: five .5s ease 0s infinite ;
+    animation-delay: 1s;
+}
+
+.six {
+    width: 10px;
+    border-radius: 20px;
+    height: 20%;
+    background-color: black;
+    animation: six .5s ease 0s infinite ;
+    animation-delay: 1.2s;
+}
+
+@keyframes first {
+    0% {
+        height: 20%;
+        background-color: black;
+    }    
+
+    50% {
+        height: 60%;
+        background-color: red;
+    }
+
+    100% {
+        height: 20%;
+        background-color: black;
+    }
+}
+@keyframes second {
+    0% {
+        height: 20%;
+        background-color: black;
+    }    
+
+    50% {
+        height: 60%;
+        background-color: red;
+    }
+
+    100% {
+        height: 20%;
+        background-color: black;
+    }
+}
+@keyframes third {
+    0% {
+        height: 20%;
+        background-color: black;
+    }    
+
+    50% {
+        height: 60%;
+        background-color: red;
+    }
+
+    100% {
+        height: 20%;
+        background-color: black;
+    }
+}
+@keyframes four {
+    0% {
+        height: 20%;
+        background-color: black;
+    }    
+
+    50% {
+        height: 60%;
+        background-color: red;
+    }
+
+    100% {
+        height: 20%;
+        background-color: black;
+    }
+}
+@keyframes five {
+    0% {
+        height: 20%;
+        background-color: black;
+    }    
+
+    50% {
+        height: 60%;
+        background-color: red;
+    }
+
+    100% {
+        height: 20%;
+        background-color: black;
+    }
+}
+@keyframes six {
+    0% {
+        height: 20%;
+        background-color: black;
+    }    
+
+    50% {
+        height: 60%;
+        background-color: red;
+    }
+
+    100% {
+        height: 20%;
+        background-color: black;
+    }
+}
