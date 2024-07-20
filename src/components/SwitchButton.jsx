@@ -7,6 +7,8 @@ function SwitchButton() {
 
   if(localStorage.getItem("theme") == null) {
     localStorage.setItem("theme","dark")
+  } else {
+    return
   }
   let color = localStorage.getItem("theme") 
 
