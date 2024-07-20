@@ -471,8 +471,22 @@ html[data-theme="light"] {
         transition: .3s linear;
         background-color: var(--back-social);
         border: 2px solid transparent;
+        background-repeat: no-repeat;
+        background-position: center;
 
         @include sizes(30px,30px)
+    }
+
+    &__link:nth-child(1) {
+        background-image: url("../images/instagram.png");
+    }
+
+    &__link:nth-child(2) {
+        background-image: url("../images/facebook.png");
+    }
+
+    &__link:nth-child(3) {
+        background-image: url("../images/twitter.png");
     }
 
     &__link a {
