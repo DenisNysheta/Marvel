@@ -6,6 +6,7 @@ import { useState } from 'react'
 function SwitchButton() {
 
   let colorTheme = localStorage.getItem("theme")
+  let color;
 
   if(colorTheme === null) {
     localStorage.setItem("theme","dark")
