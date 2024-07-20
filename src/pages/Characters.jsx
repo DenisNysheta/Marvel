@@ -37,7 +37,7 @@ function Characters() {
         if(findQuery) {
             localStorage.removeItem("list")
             setHerous([])
-            let response = await Hero.getAll(`http://gateway.marvel.com/v1/public/characters?ts=1&nameStartsWith=${findQuery}&limit=50&apikey=2e1cdeec426ae323484f29024084c206&hash=d516513ba95b9407c7aca0f73b241f8a`)
+            let response = await Hero.getAll(`https://gateway.marvel.com/v1/public/characters?ts=1&nameStartsWith=${findQuery}&limit=50&apikey=2e1cdeec426ae323484f29024084c206&hash=d516513ba95b9407c7aca0f73b241f8a`)
             localStorage.setItem("list",`${JSON.stringify(response.data.data.results)}`)
             setHerous([...response.data.data.results])
         } else {

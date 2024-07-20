@@ -20,7 +20,7 @@ function HeroItem() {
     const [hero,setHero] = useState({name: "", description: "", thumbnail: {path: "", extension: ""}})
     const [herouSlides, setHerousSlides] = useState([])
     const [fetching, isLoaded] = useFetching(async () => {
-        const hero = await Hero.getAll(`http://gateway.marvel.com/v1/public/characters/${id}?ts=1&limit=30&apikey=2e1cdeec426ae323484f29024084c206&hash=d516513ba95b9407c7aca0f73b241f8a`)
+        const hero = await Hero.getAll(`https://gateway.marvel.com/v1/public/characters/${id}?ts=1&limit=30&apikey=2e1cdeec426ae323484f29024084c206&hash=d516513ba95b9407c7aca0f73b241f8a`)
         const heroComics = await Hero.getAll(`https://gateway.marvel.com/v1/public/characters/${id}/comics?ts=1&limit=10&apikey=2e1cdeec426ae323484f29024084c206&hash=d516513ba95b9407c7aca0f73b241f8a`)
       
         const obj = hero.data.data.results[0]
