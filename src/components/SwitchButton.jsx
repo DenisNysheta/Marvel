@@ -5,8 +5,14 @@ import { useState } from 'react'
 
 function SwitchButton() {
 
-  localStorage.setItem("theme","dark")
-  let color = localStorage.getItem("theme") 
+  let colorTheme = localStorage.getItem("theme")
+
+  if(colorTheme === null) {
+    localStorage.setItem("theme","dark")
+    color = localStorage.getItem("theme") 
+  } else {
+    color = localStorage.getItem("theme") 
+  }
 
   const [isSwitch, setSwitch] = useState(color)
   document.documentElement.setAttribute("data-theme", isSwitch)
