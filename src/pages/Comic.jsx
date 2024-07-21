@@ -60,7 +60,7 @@ function Comic() {
                             </p>
                             <ul>
                                 {Array.isArray(comic.editors) ? comic.editors.map((editor) => {
-                                    return <li style={{textDecoration: "underline", color: "cyan"}}>Name: {editor.name}, Role: {editor.role}</li>
+                                    return <li className="comic__editor" >Name: {editor.name}, Role: {editor.role}</li>
                                 }) : null}
                             </ul>
                         </div>
