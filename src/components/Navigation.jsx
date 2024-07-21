@@ -8,7 +8,7 @@ function Navigation(props) {
 
   return (
     <ul className={menuBurger === true ? "menu menu-list" : "menu"}>
-        <Link to="/" className='menu__link'>
+        <Link to="/Marvel" className='menu__link'>
             <p>Home</p>
         </Link>
         <Link to="/Characters" className='menu__link'>
