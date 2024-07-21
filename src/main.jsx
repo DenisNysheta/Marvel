@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createContext } from 'react'
 import ReactDOM from 'react-dom/client'
 import "./assets/styles/normalize.css"
 
@@ -8,12 +8,16 @@ import Home from './pages/Home.jsx'
 import NotFound from './components/NotFound.jsx'
 import Characters from './pages/Characters.jsx'
 import HeroItem from './pages/HeroItem.jsx'
+import Comics from './pages/Comics.jsx'
+import Comic from './pages/Comic.jsx'
+
+export const MyContext = createContext()
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/Marvel",
     element: <Home />,
-    errorElement: <NotFound />
+    errorElement: <NotFound />,
   },
   {
     path: "/Characters",
@@ -24,11 +28,23 @@ const router = createBrowserRouter([
     path: "/Characters/:id",
     element: <HeroItem />,
     errorElement: <NotFound />
+  },
+  {
+    path: "/Comics",
+    element: <Comics />,
+    errorElement: <NotFound/>
+  },
+  {
+    path: "/Comics/:id",
+    element: <Comic />,
+    errorElement: <NotFound />
   }
 ]);
 
 ReactDOM.createRoot(document.getElementById('marvel')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <MyContext.Provider value={{apiKey: "2e1cdeec426ae323484f29024084c206", hash: "d516513ba95b9407c7aca0f73b241f8a"}}>
+      <RouterProvider router={router} />
+    </MyContext.Provider>
   </React.StrictMode>,
 )
