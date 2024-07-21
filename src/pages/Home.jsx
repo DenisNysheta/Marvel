@@ -10,6 +10,7 @@ import Subscribe from '../components/Subscribe'
 import Footer from '../components/Footer'
 // Background
 import { getListbackground } from '../assets/data/data'
+import Loader from '../components/UI/loader/Loader'
 
 function Home() {
 
