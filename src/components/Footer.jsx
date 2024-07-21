@@ -7,6 +7,9 @@ function Footer() {
     <div className='footer'>
         <div className='footer__logo'>
         </div>
+        <p className='footer__source '>
+        "Data provided by Marvel. © 2014 Marvel"
+        </p>
         <ul className='footer__socials'>
             <li className='footer__link'>
                 <a aria-label='instagram' target='_blank' href="https://www.instagram.com/marvel/">
