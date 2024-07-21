@@ -27,6 +27,9 @@ html[data-theme="dark"] {
     --main-color-text: white;
     --position-btnSwitch: 50px;
 
+    --color-loader: black;
+    --color-loader-appearence: red;
+
     --dark-logo: 1;
     --white-logo: 0;
 
@@ -61,6 +64,9 @@ html[data-theme="light"] {
     --menu-text-color: black;
     --main-color-text: black;
     --position-btnSwitch:0px;
+
+    --color-loader: transparent;
+    --color-loader-appearence: black;
 
     --dark-logo: 0;
     --white-logo: 1;
@@ -97,7 +103,7 @@ html[data-theme="light"] {
     z-index: 10;
     box-shadow:  0px 0px 20px 2px rgb(0, 0, 0);
     background: var(--background-elements);
-    
+
     &__img {
 
         animation: field 15s linear infinite ;
@@ -499,12 +505,17 @@ html[data-theme="light"] {
         border-color: #ebebeb
     }
 
+    &__source {
+        color: var(--main-color-text);
+    }
+
     @include flexy(space-evenly,center,row,wrap);
-    @include sizes(100%, 155px);
+    @include sizes(100%, 250px);
     @include colors(white, var(--background-footer));
 
-    @include mobile-l-portrait {
+    @include tablet-l-portrait {
         height: 350px;
+        flex-direction: column;
     }
 }
 
@@ -582,6 +593,54 @@ html[data-theme="light"] {
 
     @include flexy(flex-end,center,column,no-wrap);
     @include sizes(100%, 100vh)
+}
+
+.comics {
+    height: auto !important;
+
+    &__content {
+        background-color: rgba(0, 0, 0, 0.719);
+        @include flexy(flex-end,center,column,no-wrap);
+        @include sizes(100%,auto);
+    }
+
+    @include sizes(100%, 100vh);
+    @include flexy(flex-end,center,column,no-wrap);
+}
+
+.comic {
+    height: 385px !important;
+}
+
+.comics__box {
+    min-height: 750px;
+    border-radius: 20px;
+    
+    &__search {
+        @include flexy(space-evenly,center,column,no-wrap);
+        @include sizes(500px,300px);
+
+        @include mobile-portrait {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        height: 435px !important;
+    }
+
+    &__list {
+        min-height: 600px;
+        gap: 20px;
+
+        @include flexy(center, center,row,wrap);
+        @include sizes(90%, auto)
+    }
+
+    @include indentation(0 0 45px 0, 200px 5px 50px 5px);
+    @include sizes(95%,auto);
+    @include flexy(flex-start,center,column,no-wrap);
+    @include colors(var(--main-color-text),var(--background-elements));
 }
 
 .characters {
@@ -745,10 +804,24 @@ html[data-theme="light"] {
         }
     }
 
+    &__pages {
+        transition: .1s ease;
+        gap: 30px;
+
+        & ul {
+            gap: 20px;
+            @include flexy(center,flex-start,column,no-wrap);
+        }
+
+        margin-top: 25px;
+        @include sizes(80%, auto);
+        @include flexy(space-between,flex-start,row,wrap)
+    }
+
     &__content {
         padding:  0 0 40px 0;
         background-color: rgba(0, 0, 0, 0.719);
-        @include sizes(100%,100vh);
+        @include sizes(100%,auto);
         @include flexy(center,center,row,no-wrap);
 
         @include mobile-l-portrait {
@@ -756,8 +829,22 @@ html[data-theme="light"] {
         }
     }
 
+    &__appearence {
+        text-align: center;
+        text-decoration:underline;
+        transition: .5s linear;
+        margin-bottom: 15px;
+        color: var(--main-color-text);
+        
+        @include font(20px,700);
+    }
+
     &__description {
         margin-bottom: 35px;
+
+        & h1 {
+            text-align: center;
+        }
 
         & p {
             text-align: center;
@@ -803,7 +890,7 @@ html[data-theme="light"] {
     }
 
     @include flexy(flex-end,center,column,no-wrap);
-    @include sizes(100%,100vh)
+    @include sizes(100%,auto)
 }
 
 .comics-slider {

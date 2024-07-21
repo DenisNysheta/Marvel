@@ -11,7 +11,7 @@
     width: 10px;
     border-radius: 20px;
     height: 20%;
-    background-color: black;
+    background-color: var(--color-loader);
     animation: first .5s ease 0s infinite;
     animation-delay: .2s;
 }
@@ -20,7 +20,7 @@
     width: 10px;
     border-radius: 20px;
     height: 20%;
-    background-color: black;
+    background-color: var(--color-loader);
     animation: second .5s ease 0s infinite  ;
     animation-delay: .4s;
 }
@@ -29,7 +29,7 @@
     width: 10px;
     border-radius: 20px;
     height: 20%;
-    background-color: black;
+    background-color: var(--color-loader);
     animation: third .5s ease 0s infinite  ;
     animation-delay: .6s;
 }
@@ -38,7 +38,7 @@
     width: 10px;
     border-radius: 20px;
     height: 20%;
-    background-color: black;
+    background-color: var(--color-loader);
     animation: four .5s ease 0s infinite ;
     animation-delay: .8s;
 }
@@ -47,7 +47,7 @@
     width: 10px;
     border-radius: 20px;
     height: 20%;
-    background-color: black;
+    background-color: var(--color-loader);
     animation: five .5s ease 0s infinite ;
     animation-delay: 1s;
 }
@@ -56,7 +56,7 @@
     width: 10px;
     border-radius: 20px;
     height: 20%;
-    background-color: black;
+    background-color: var(--color-loader);
     animation: six .5s ease 0s infinite ;
     animation-delay: 1.2s;
 }
@@ -64,96 +64,96 @@
 @keyframes first {
     0% {
         height: 20%;
-        background-color: black;
+        background-color: var(--color-loader);
     }    
 
     50% {
         height: 60%;
-        background-color: red;
+        background-color: var(--color-loader-appearence);
     }
 
     100% {
         height: 20%;
-        background-color: black;
+        background-color: var(--color-loader);
     }
 }
 @keyframes second {
     0% {
         height: 20%;
-        background-color: black;
+        background-color: var(--color-loader);
     }    
 
     50% {
         height: 60%;
-        background-color: red;
+        background-color: var(--color-loader-appearence);
     }
 
     100% {
         height: 20%;
-        background-color: black;
+        background-color: var(--color-loader);
     }
 }
 @keyframes third {
     0% {
         height: 20%;
-        background-color: black;
+        background-color: var(--color-loader);
     }    
 
     50% {
         height: 60%;
-        background-color: red;
+        background-color: var(--color-loader-appearence);
     }
 
     100% {
         height: 20%;
-        background-color: black;
+        background-color: var(--color-loader);
     }
 }
 @keyframes four {
     0% {
         height: 20%;
-        background-color: black;
+        background-color: var(--color-loader);
     }    
 
     50% {
         height: 60%;
-        background-color: red;
+        background-color: var(--color-loader-appearence);
     }
 
     100% {
         height: 20%;
-        background-color: black;
+        background-color: var(--color-loader);
     }
 }
 @keyframes five {
     0% {
         height: 20%;
-        background-color: black;
+        background-color: var(--color-loader);
     }    
 
     50% {
         height: 60%;
-        background-color: red;
+        background-color: var(--color-loader-appearence);
     }
 
     100% {
         height: 20%;
-        background-color: black;
+        background-color: var(--color-loader);
     }
 }
 @keyframes six {
     0% {
         height: 20%;
-        background-color: black;
+        background-color: var(--color-loader);
     }    
 
     50% {
         height: 60%;
-        background-color: red;
+        background-color: var(--color-loader-appearence);
     }
 
     100% {
         height: 20%;
-        background-color: black;
+        background-color: var(--color-loader);
     }
 }
