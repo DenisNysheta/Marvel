@@ -447,3 +447,151 @@ export function getListbackground() {
       
       return list
 }
+
+export function getComics() {
+  let list = [
+    {
+      "title": "Marvel Previews (2017)",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+        "extension": "jpg"
+      },
+    },
+    {
+      "title": "Marvel Previews (2017)",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+        "extension": "jpg"
+      },
+    },
+    {
+      "title": "Marvel Previews (2017)",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/80/5e3d7536c8ada",
+        "extension": "jpg"
+      },
+    },
+    {
+      "title": "Official Handbook of the Marvel Universe (2004) #10 (MARVEL KNIGHTS)",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/30/4bc64df4105b9",
+        "extension": "jpg"
+      },
+    },
+    {
+      "title": "Ultimate Spider-Man (2000) #110 (Mark Bagley Variant)",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/4bc4947ea8f4d",
+        "extension": "jpg"
+      },
+    },
+    {
+      "title": "Official Handbook of the Marvel Universe (2004) #12 (SPIDER-MAN)",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/4bc64020a4ccc",
+        "extension": "jpg"
+      },
+    },
+    {
+      "title": "The Stand: American Nightmares HC (Hardcover)",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/00/4bb4c3523c46f",
+        "extension": "jpg"
+      },
+    },
+    {
+      "title": "Ant-Man (2003) #1",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/e0/4bc6a2497684e",
+        "extension": "jpg"
+      },
+      "description": ""
+    },
+    {
+      "title": "Official Handbook of the Marvel Universe (2004) #14 (FANTASTIC FOUR)",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/90/4bc6353e5fc56",
+        "extension": "jpg"
+      },
+    },
+    {
+      "title": "Official Handbook of the Marvel Universe (2004) #9 (THE WOMEN OF MARVEL)",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/b0/4c7d666c0e58a",
+        "extension": "jpg"
+      },
+    },
+    {
+      "title": "Hedge Knight II: Sworn Sword (2007) #1 (Yu Variant)",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/50/4bc49463dad62",
+        "extension": "jpg"
+      },
+    },
+    {
+      "title": "Official Handbook of the Marvel Universe (2004) #11 (X-MEN - AGE OF APOCALYPSE)",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/b0/4bc6494ed6eb4",
+        "extension": "jpg"
+      },
+    },
+    {
+      "title": "Official Handbook of the Marvel Universe (2004) #13 (TEAMS)",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/20/4bc63a47b8dcb",
+        "extension": "jpg"
+      },
+    },
+    {
+      "title": "ULTIMATE X-MEN VOL. 5: ULTIMATE WAR TPB (Trade Paperback)",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/f0/4bc6670c80007",
+        "extension": "jpg"
+      },
+    },
+    {
+      "title": "Ant-Man (2003) #4",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/4/20/4bc697c680890",
+        "extension": "jpg"
+      },
+    },
+    {
+      "title": "Gun Theory (2003) #4",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/60/4bc69f11baf75",
+        "extension": "jpg"
+      },
+    },
+    {
+      "title": "Silver Surfer (1987)",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+        "extension": "jpg"
+      },
+    },
+    {
+      "title": "Ant-Man (2003) #3",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/70/4bc69c7e9b9d7",
+        "extension": "jpg"
+      },
+    },
+    {
+      "title": "Ant-Man (2003) #2",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/20/4bc69f33cafc0",
+        "extension": "jpg"
+      },
+    },
+    {
+      "title": "Startling Stories: The Incorrigible Hulk (2004) #1",
+      "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+        "extension": "jpg"
+      },
+    }
+  ]
+
+  return list
+}
