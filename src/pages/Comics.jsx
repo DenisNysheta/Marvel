@@ -28,9 +28,10 @@ function Comics() {
     if(findQuery) {
         localStorage.removeItem("listComics")
         setComics([])
+
         let response = await Hero.getAll(`https://gateway.marvel.com/v1/public/comics?ts=1&titleStartsWith=${findQuery}&apikey=${apiKey}&hash=${hash}`)
         localStorage.setItem("listComics",`${JSON.stringify(response.data.data.results)}`)
-        console.log(response)
+        
         setComics([...response.data.data.results])
     } else {
         let list = JSON.parse(localStorage.getItem("listComics"))
@@ -47,6 +48,7 @@ function Comics() {
     setTimeout(() => {
       setLoaded(1)
   },100)
+  
 },[])
 
   function sortComics(comics, sort) {
@@ -60,7 +62,6 @@ function Comics() {
     return sorted
   }
 
-  console.log(sort)
   const listComics = sortComics(comics, sort)
 
   return (
