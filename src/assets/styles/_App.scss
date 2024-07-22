@@ -128,6 +128,10 @@ html[data-theme="light"] {
 
         @include sizes(120px,120px);
 
+        @include desktop-s-portrait {
+            @include sizes(100px, 100px)
+        }
+
         @include mobile-s-protrait {
             @include sizes(80px,80px)
         }
@@ -621,9 +625,19 @@ html[data-theme="light"] {
 }
 
 .comics__box {
-    min-height: 750px;
+    min-height: 585px;
     border-radius: 20px;
-    
+    position: relative;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__back {
+        position: absolute;
+        @include sizes(100px,100px)
+    }
+
     &__search {
         @include flexy(space-evenly,center,column,no-wrap);
         @include sizes(500px,300px);
@@ -638,7 +652,7 @@ html[data-theme="light"] {
     }
 
     &__list {
-        min-height: 600px;
+        min-height: 200px;
         gap: 20px;
 
         @include flexy(center, center,row,wrap);
@@ -697,7 +711,7 @@ html[data-theme="light"] {
 
     &__box {
         border-radius: 20px;
-
+        
         @include flexy(space-evenly,center,column,no-wrap);
         @include indentation(0 0 45px 0, 200px 5px 50px 5px);
         @include colors(var(--main-color-text),var(--background-elements));
@@ -708,6 +722,39 @@ html[data-theme="light"] {
         }
     }
 
+}
+
+.try-box {
+
+    &__title {
+        @include font(55px,900);
+
+        @include desktop-s-portrait {
+            @include font(27px,900)
+        }
+    }
+
+    @include flexy(center, center, row, no-wrap);
+    @include sizes(100%,500px);
+    @include colors(white, rgba(0, 0, 0, 0.719));
+}
+
+.comics-slider {
+    gap: 50px;
+
+    &__title {
+        text-align: center;
+        @include font(45px, 900);
+        @include colors(var(--main-color-text),var(none));
+
+        @include tablet-l-portrait {
+            font-size: 25px;
+        }
+    }
+
+    @include indentation(0, 20px 0 50px 0);
+    @include sizes(100%,auto);
+    @include colors(var(--main-color-text),var(--background-elements))
 }
 
 .not-found {
@@ -861,6 +908,10 @@ html[data-theme="light"] {
             @include desktop-s-portrait {
                 font-size: 18px;
             }
+
+            @include mobile-portrait {
+                font-size: 13px;
+            };
         }
 
         @include flexy(center,center,column,no-wrap);
@@ -901,7 +952,44 @@ html[data-theme="light"] {
     @include sizes(100%,auto)
 }
 
+.comics-slider__box__slider {
+
+    & .slider__item {
+        height: 330px;
+    }
+
+    @include sizes(800px,auto);
+
+    @include tablet-l-portrait {
+        @include sizes(560px,300px);
+    };
+
+    @include tablet-s-portrait {
+        width: 330px;
+    };
+    
+}
+
+.comics-slider__box__title {
+    @include tablet-l-portrait {
+        font-size: 14px;
+    }
+
+    @include tablet-s-portrait {
+        font-size: 12px;
+    }
+}
+
 .comics-slider {
+
+    &__box {
+        gap: 20px;
+        @include flexy(center,center,column,wrap);
+
+        @include tablet-l-portrait {
+            gap: 65px;
+        };
+    }
 
     &__item {
         height: 310px;
@@ -944,6 +1032,10 @@ html[data-theme="light"] {
             height: 180px;
         }
     }
-
+    
     @include flexy(center,center,column,no-wrap);
+
+    @include tablet-l-portrait {
+        padding-bottom: 80px;
+    }
 }
