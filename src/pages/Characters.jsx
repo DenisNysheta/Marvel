@@ -77,8 +77,12 @@ function Characters() {
                 <div className='characters__box'>
                     <h1 className='characters__title'>Hero, in this place you can find your character, and information about him</h1>
                     <div className='characters__search'>
-                        <Input value={findQuery} onChange={(e) => setFindQuery(e.target.value)} type="text" placeholder="Find by name"/>
-                        <Button onClick={() => fetching()}>Find</Button>
+                        {localStorage.getItem("user") ?
+                          <>
+                            <Input value={findQuery} onChange={(e) => setFindQuery(e.target.value)} type="text" placeholder="Find by name"/>
+                            <Button onClick={() => fetching()}>Find</Button>
+                          </> : <p>Sorry but you need log in, or register on our website</p>
+                        }
                         <div className='characters__search__sort'>
                             <Select value={sort} onChange={setSort} options={[
                                 {
@@ -99,9 +103,13 @@ function Characters() {
                             return <div style={{opacity: loaded}} key={id} id={id} className='hero'>
                                 <img className='hero__img' src={`${path}.${extension}`} alt="" />
                                 <p className='hero__name'>{name}</p>
-                                <Link to={`/Characters/${id}`}>
-                                    <Button>More</Button>
-                                </Link>
+                                {localStorage.getItem("user") ? 
+                                    <>
+                                    <Link to={`/Characters/${id}`}>
+                                        <Button>More</Button>
+                                    </Link>
+                                    </> : null
+                                }
                             </div>
                          })
                         }

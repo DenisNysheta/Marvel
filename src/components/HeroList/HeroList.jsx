@@ -18,7 +18,7 @@ function HeroList() {
         {herous.map( hero => {
             const {id,thumbnail: {path, extension}} = hero
             if(path.includes("not_available") != true ) {
-                let boxJpg = <div key={id} style={{opacity: isLoading}} className={cl.list__hero} ><img src={`${path}.${extension}`}/></div>
+                let boxJpg = <div key={id} style={{opacity: isLoading}} className={cl.list__hero} ><img src={`${path}.${extension}`} alt={hero.name}/></div>
                 return boxJpg
             }
         })}

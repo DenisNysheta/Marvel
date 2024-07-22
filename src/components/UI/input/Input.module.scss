@@ -45,3 +45,26 @@
         width: 80%;
     }
 }
+
+.password {
+    border: none;
+    outline: none;
+    transition: .2s linear;
+
+    &:focus {
+        border-radius: 20px
+    }
+
+    &:hover {
+        border-radius: 20px
+    }
+
+    @include font(20px,900);
+    @include indentation(0, 0 0 0 20px);
+    @include colors(var(--backcolor-btn-logout), var( --line-color-hover-menu));
+    @include sizes(300px, 50px);
+    
+    @include mobile-portrait {
+        width: inherit;
+    }
+}

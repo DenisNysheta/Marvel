@@ -19,9 +19,6 @@ function Home() {
     let firstSlider = slidersComics.slice(0,10)
     let secondSlider = slidersComics.slice(10,20)
 
-    console.log(firstSlider)
-    console.log(secondSlider)
-
   return (
         <>  
             <Header/>
@@ -41,7 +38,7 @@ function Home() {
                         >
                             {firstSlider.map((comic) => {
                                return (
-                                <SwiperSlide>
+                                <SwiperSlide key={+((Math.random() * 1000).toFixed(0))}>
                                     <div className='slider__item'>
                                         <img className='slider__img' src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt="" />
                                         <p  className='slider__name comics-slider__box__title'>{comic.title}</p>
@@ -59,7 +56,7 @@ function Home() {
                         >
                             {secondSlider.map((comic) => {
                                return (
-                                <SwiperSlide>
+                                <SwiperSlide key={+((Math.random() * 1000).toFixed(0))}>
                                     <div className='slider__item'>
                                         <img className='slider__img' src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt="" />
                                         <p  className='slider__name comics-slider__box__title'>{comic.title}</p>

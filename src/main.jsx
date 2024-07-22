@@ -1,4 +1,4 @@
-import React, { createContext } from 'react'
+import React, { createContext, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import "./assets/styles/normalize.css"
 
@@ -10,8 +10,10 @@ import Characters from './pages/Characters.jsx'
 import HeroItem from './pages/HeroItem.jsx'
 import Comics from './pages/Comics.jsx'
 import Comic from './pages/Comic.jsx'
+import Registration from './pages/Registration.jsx'
 
 export const MyContext = createContext()
+
 
 const router = createBrowserRouter([
   {
@@ -38,6 +40,11 @@ const router = createBrowserRouter([
     path: "/Comics/:id",
     element: <Comic />,
     errorElement: <NotFound />
+  },
+  {
+    path: "/Registration",
+    element: <Registration/>,
+    errorElement: <NotFound/>
   }
 ]);
 

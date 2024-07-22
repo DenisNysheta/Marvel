@@ -73,8 +73,12 @@ function Comics() {
           <div className='comics__box'>
             <h1 className='comics__box__title'>Hero, in this place you cand find your favourite comic strip</h1>
             <div className='comics__box__search'>
-                <Input value={findQuery} onChange={(e) => setFindQuery(e.target.value)} type="text" placeholder="Find by name"/>
-                <Button onClick={() => fetching()}>Find</Button>
+                {localStorage.getItem("user") ? 
+                  <>
+                    <Input value={findQuery} onChange={(e) => setFindQuery(e.target.value)} type="text" placeholder="Find by name"/>
+                    <Button onClick={() => fetching()}>Find</Button>
+                  </> : <p>Sorry but you need log in, or register on our website</p>
+                }
                 <div className='comics__box__sort'>
                     <Select value={sort} onChange={setSort} options={[
                         {
@@ -95,9 +99,13 @@ function Comics() {
                   return <div style={{opacity: loaded}} key={id} id={id} className='hero comic'>
                     <img className='hero__img' src={`${path}.${extension}`} alt="" />
                     <p className='hero__name'>{title}</p>
-                    <Link to={`/Comics/${id}`}>
-                      <Button>More</Button>
-                    </Link>
+                    {localStorage.getItem("user") ? 
+                      <>
+                      <Link to={`/Comics/${id}`}>
+                        <Button>More</Button>
+                      </Link>
+                      </> : null
+                    }
                   </div>
                })
               }
