@@ -265,6 +265,7 @@ html[data-theme="light"] {
     }
 
     &__description {
+        overflow: hidden;
         transition: .5s ease;
         position: absolute;
         top: 0;
@@ -285,6 +286,7 @@ html[data-theme="light"] {
     }
 
     &__item {
+        overflow: hidden;
         position: relative;
         border-radius: 0 0 20px 20px;
 
@@ -1046,7 +1048,11 @@ html[data-theme="light"] {
     &__text {
         max-width: 500px;
         text-align: center;
-        @include font(20px, 700)
+        @include font(20px, 700);
+
+        @include tablet-l-portrait {
+            font-size: 14px;
+        }
     }
 
     &__box {
@@ -1065,11 +1071,38 @@ html[data-theme="light"] {
     &__values {
         position: relative;
         gap: 25px;
+
+        & > input {
+            @include tablet-l-portrait {
+                width: inherit;
+            };
+
+            @include tablet-s-portrait {
+                width: 185px;
+            };
+
+            @include mobile-l-portrait {
+                width: 150px;
+            };
+        }
+
+        & > .form__lose {
+            text-align: center;
+            @include flexy(center,center,row,no-wrap);
+        }
+
+        & > .form__lose:before {
+            width: inherit;
+            content: "You already log in";
+
+            @include tablet-l-portrait {
+                font-size: 23px;
+            }
+        }
+
         @include flexy(center,center,column,no-wrap)
     }
 
     @include sizes(100%,100vh);
 }
 
-.registr__succes::after {
-} 
