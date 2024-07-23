@@ -22,27 +22,27 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
   },
   {
-    path: "/Characters",
+    path: "/Marvel/Characters",
     element: <Characters />,
     errorElement: <NotFound />
   },
   {
-    path: "/Characters/:id",
+    path: "/Marvel/Characters/:id",
     element: <HeroItem />,
     errorElement: <NotFound />
   },
   {
-    path: "/Comics",
+    path: "/Marvel/Comics",
     element: <Comics />,
     errorElement: <NotFound/>
   },
   {
-    path: "/Comics/:id",
+    path: "/Marvel/Comics/:id",
     element: <Comic />,
     errorElement: <NotFound />
   },
   {
-    path: "/Registration",
+    path: "/Marvel/Registration",
     element: <Registration/>,
     errorElement: <NotFound/>
   }
