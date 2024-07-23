@@ -30,8 +30,8 @@ function Characters() {
     const [loaded, setLoaded] = useState(0)
 
     useEffect(() => {
-        if(localStorage.getItem("list")) {
-            let list = JSON.parse(localStorage.getItem("list"))
+        if(localStorage.getItem("listHerous")) {
+            let list = JSON.parse(localStorage.getItem("listHerous"))
             setHerous([...list])
         }
 
@@ -54,6 +54,7 @@ function Characters() {
             setHerous([...list])
         }
     })
+
 
     function sortHerous(herous, sort) {
         let sorted =  useMemo(() => {
