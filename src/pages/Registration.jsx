@@ -22,9 +22,21 @@ function Registration() {
         e.preventDefault()
         let namePattern =  /^[a-z ,.'-]+$/i
         let emailPattern =  /^((([0-9A-Za-z]{1}[-0-9A-z\.]{1,}[0-9A-Za-z]{1})|([0-9А-Яа-я]{1}[-0-9А-я\.]{1,}[0-9А-Яа-я]{1}))@([-A-Za-z]{1,}\.){1,2}[-A-Za-z]{2,})$/u
-    
+
+        let user = JSON.parse(localStorage.getItem("user"))
         let notCorrect = inCorrect.current
-    
+        if(user) {
+          if(user.email === registrValues.email) {
+            console.log(user)
+            lose.current.style.opacity = 1
+            setTimeout(() => {
+              lose.current.style.opacity = 0
+            },1000)
+            setRegistrValues({name: "", email: "", password: ""})
+            return
+          }
+        }
+
         if(namePattern.test(registrValues.name) == false) {
           notCorrect.style.opacity = 1
           setTimeout(() => {
@@ -56,7 +68,8 @@ function Registration() {
         },1000)
 
         let obj = {
-            ...registrValues
+          id:+((Math.random() * 10000).toFixed(0)),
+          ...registrValues
         }
 
         localStorage.setItem("user",JSON.stringify(obj))
@@ -73,7 +86,7 @@ function Registration() {
                 <div>
                   <form className='registration__values' onSubmit={(e) => registr(e)} action="post">
                     <div ref={succes} className='form__succes registr__succes'></div>
-                    <div ref={lose} className='form__lose'>You already log in</div>
+                    <div ref={lose} className='form__lose'></div>
                     <div ref={inCorrect} className='form__incorect'>Incorrect values in inputs</div>
                     <Input maxLength={6} value={registrValues.name} type="text" onChange={(e) => setRegistrValues({...registrValues, name: e.target.value})} placeholder='Your name hero'/>
                     <Input value={registrValues.email} type="email" onChange={(e) => setRegistrValues({...registrValues, email: e.target.value})} placeholder='Your email'/>

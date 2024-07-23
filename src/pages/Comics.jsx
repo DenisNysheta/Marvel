@@ -101,7 +101,7 @@ function Comics() {
                     <p className='hero__name'>{title}</p>
                     {localStorage.getItem("user") ? 
                       <>
-                      <Link to={`/Comics/${id}`}>
+                      <Link to={`/Marvel/Comics/${id}`}>
                         <Button>More</Button>
                       </Link>
                       </> : null
