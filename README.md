@@ -1,4 +1,4 @@
-# Marvel Heroes Directory :leaves:
+# Marvel Herous Directory :leaves:
 This project is a directory of Marvel superheroes, showcasing their profiles and abilities. 
 It leverages the Marvel Comics API to fetch data dynamically and display it in an organized manner.
 
