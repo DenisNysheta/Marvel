@@ -23,7 +23,7 @@ function Login() {
 
   return (
     <div className='log'>
-        <Link  to={user ? "" : "/Registration"}>
+        <Link  to={user ? "" : "/Marvel/Registration"}>
           <Button  >{text}</Button>
         </Link>
         <Button onClick={() => deleteUser()}>Log Out</Button>
