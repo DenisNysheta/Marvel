@@ -21,7 +21,7 @@ This web page displays a list of Marvel characters with their basic attributes s
 ### How to install, and use
 ____
 ```JS
-git clone
+git clone https://github.com/DenisNysheta/Marvel.git
 npm install
 npm run dev
 ```
