@@ -11,10 +11,10 @@ function Navigation(props) {
         <Link to="/Marvel" className='menu__link'>
             <p>Home</p>
         </Link>
-        <Link to="/Characters" className='menu__link'>
+        <Link to="/Marvel/Characters" className='menu__link'>
             <p>Characters</p>
         </Link>
-        <Link to="/Comics" className='menu__link'>
+        <Link to="/Marvel/Comics" className='menu__link'>
             <p>Comics</p>
         </Link>
     </ul>
