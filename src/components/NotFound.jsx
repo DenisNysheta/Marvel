@@ -2,17 +2,14 @@ import React from 'react'
 // Components
 import Header from './Header'
 import Footer from './Footer'
-import Background from './Background'
 import HeroList from './HeroList/HeroList'
 // Styles
 import "../assets/styles/_App.scss"
 import "../assets/styles/mixins.scss"
-import { useRouteError } from 'react-router'
 // Img
 import back from "../assets/images/backgroundNotFound.png"
 
 function NotFound() {
-    const error = useRouteError()
 
   return (
     <>
